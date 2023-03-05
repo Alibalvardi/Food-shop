@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:background="@drawable/background_top"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <FrameLayout
+            android:layout_marginTop="20dp"
+            android:paddingEnd="12dp"
+            android:paddingStart="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_gravity="center_vertical|start"
+                android:text="AliFood App"
+                android:textColor="?attr/colorOnPrimary"
+                android:textSize="38sp"
+                android:fontFamily="@font/primary_bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <ImageView
+                android:id="@+id/btn_addNewFood"
+                android:layout_gravity="center_vertical|end"
+                app:srcCompat="@drawable/ic_add"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                app:tint="?attr/colorOnPrimary" />
+
+        </FrameLayout>
+
+
+        <EditText
+            android:id="@+id/edt_search"
+            android:background="@drawable/background_find"
+            android:layout_marginStart="12dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginTop="16dp"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:drawableStart="@drawable/ic_search"
+            android:drawableTint="@color/gray"
+            android:drawablePadding="8dp"
+            android:textColorHint="@color/gray"
+            android:hint="find food ..."
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:background="?attr/colorSurface"
+        android:id="@+id/recycleMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+</LinearLayout>
